@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ApexPlanet | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero-section">
+
+    <h2 class="page-title">TO-DO LIST</h2>
+
+    <div class="top-nav">
+        <button onclick="toggleListForm()">New List</button>
+      <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </div>
+
+
+    <div class="form-wrapper">
+
+        <div class="form-container" id="newListForm" style="display: none;">
+          <h2>Add a Task</h2>
+          <form id="taskForm">
+            <textarea id="taskInput" placeholder="Enter your task..." rows="4" required></textarea>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+    </div>
+    
+
+    <div class="todo-items" id="todoItems"></div>
+
+
+
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
