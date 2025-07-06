@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ApexPlanet | Register/Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hero-section index-hero">
+
+  <div class="form-container">
+    <div class="form-toggle">
+      <button onclick="showForm('register')">Register</button>
+      <button onclick="showForm('login')">Login</button>
+    </div>
+
+    <div id="registerForm" class="form-box">
+      <h2>Register</h2>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div id="loginForm" class="form-box" style="display: none;">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+</div>
+  <script defer src="script.js"></script>
+</body>
+</html>

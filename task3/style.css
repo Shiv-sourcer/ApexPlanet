@@ -1,0 +1,572 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background: url('space.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-attachment: fixed;
+}
+
+.index-hero {
+  justify-content: center;   /* Center content vertically */
+  align-items: center;       /* Center content horizontally */
+}
+
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.content .brand {
+  color: #00ffe1;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content button {
+  padding: 12px 25px;
+  font-size: 1em;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+  background-color: #019170;
+}
+
+
+.form-container {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  padding: 50px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  width: 90%;
+}
+
+/*auth*/
+
+.form-toggle {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+
+.form-toggle button {
+  all: unset; /* 🚨 This removes all inherited button styling */
+  font-style: italic;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  margin: 0 10px;
+}
+
+
+
+.form-toggle button:hover {
+  background: none; /*  removes the background */
+  /*color: #00ffe1;   /* Optional: highlight on hover */
+  text-decoration: underline;
+}
+
+
+.form-box input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form-box button:hover {
+  background-color: #019170;
+}
+
+
+/*task2*/
+
+/*home*/
+
+/*.top-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}*/
+
+/* Header layout for TO-DO LIST page */
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  /* Aligns content to the top */
+  text-align: center;
+  margin-top: 30px;             /* Adds spacing from top */
+  margin-bottom: 20px;
+}
+
+.home-header .page-title {
+  margin-bottom: 20px; /* Adjust the gap here */
+}
+
+.page-title {
+  font-size: 2em;
+  color: #ddfdfa;
+  font-weight: bold;
+}
+
+.top-nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+.top-nav button {
+  padding: 10px 18px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-nav button:hover {
+  background-color: #019170;
+}
+
+/*.page-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #ddfdfa;
+  font-weight: bold;
+  z-index: 10;
+}*/
+
+/* Consistent spacing for to-do items */
+.todo-items {
+  display: flex;
+  flex-wrap: wrap;             /* Allows wrapping to next line */
+  gap: 15px;                   /* Space between items */
+  justify-content: flex-start; /* Aligns items to left */
+  padding: 20px;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.todo-items .form-container {
+  margin-bottom: 0;
+  width: 300px;                /* Fixed card width */
+  flex: 0 0 auto;              /* Prevents shrinking */
+}
+
+.todo-items .form-container p {
+  font-weight: 600;   /* Medium-bold */
+  font-size: 1.05em;
+  color: #ffffff;
+  margin: 0;
+}
+
+
+.form-container {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  max-width: 400px;
+  width: 90%;
+  margin: 20px auto;            /* Horizontally center */
+}
+
+
+/* Flex wrapper to center the form */
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Make textarea fill the form block */
+#taskInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* gap between textarea and button */
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Make the Add button full width (optional for consistency) */
+#taskForm button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#taskForm button:hover {
+  background-color: #019170;
+}
+
+
+.delete-btn {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e74c3c;  /* Red */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+
+/*contact*/
+
+.form-box textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  font-family: inherit;
+}
+
+
+/*dashboard*/
+
+.dashboard-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1100px;  /* NEW: limits the row width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.dashboard-options .form-container {
+  width: 240px;
+  padding: 30px;
+}
+
+
+.dashboard-options .form-container h2 {
+  margin-bottom: 15px;
+}
+
+.dashboard-options .form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dashboard-options .form-container button:hover {
+  background-color: #019170;
+}
+
+.icon-img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+
+/*Joke Generator*/
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #019170;
+}
+
+.form-container h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+#jokeText {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+/*Weather*/
+
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  width: 90%;
+  margin-top: 100px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-container button:hover {
+  background-color: #019170;
+}
+
+#weatherResult {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+/* Weather result container */
+.weather-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Center block (location) */
+.weather-center {
+  text-align: center;
+}
+
+.weather-icon {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  flex-wrap: wrap;
+}
+
+.weather-box {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+/* Images :*/
+
+/* Grid layout for image gallery */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#imageContainer {
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+/* Style individual images */
+.gallery-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* Responsive Design */
+
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2em;
+  }
+
+  .content p {
+    font-size: 1em;
+  }
+
+  .form-container {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .top-nav button {
+    width: 160px;
+  }
+
+  .page-title {
+    font-size: 1.5em;
+    top: 70px;
+  }
+
+  .todo-items {
+    justify-content: center;
+  }
+}
+
+/* Small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.5em;
+  }
+
+  .form-toggle button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .form-box input,
+  .form-box textarea,
+  .form-box button {
+    font-size: 1em;
+  }
+
+  .delete-btn {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}
+
+
