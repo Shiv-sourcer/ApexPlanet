@@ -1,0 +1,61 @@
+/* src/components/HomePage.css */
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-btn {
+  position: absolute;
+  top: 394px;
+  right: 863px;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  background-color: hsla(107, 100%, 52%, 0.846);
+  border: none;
+  border-radius: 29px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.name-overlay {
+  position: absolute;
+  top: 125px;
+  right: 200px;
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: white;
+  transform: rotate(-30deg);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.tagline {
+  position: absolute;
+  top: 8px;
+  right: 290px;
+  width: 200px;
+  font-size: 1.3rem;
+  color: white;
+  text-align: left;
+  line-height: 1.7;
+  transform: rotate(60deg);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}

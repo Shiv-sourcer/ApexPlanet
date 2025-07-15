@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Images</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero-section">
+    <div class="form-container">
+      <h2>Images</h2>
+      <div id="imageContainer"  class="image-grid"></div>
+      <button onclick="loadImage()">Next</button>
+    </div>
+  </section>
+
+  <script>
+  function loadImage() {
+  const imageContainer = document.getElementById("imageContainer");
+  imageContainer.innerHTML = ''; // Clear previous image
+
+  const img = document.createElement("img");
+  const randomNumber = Math.floor(Math.random() * 1000); // Prevent cache
+
+  img.src = `https://picsum.photos/600/400?random=${randomNumber}`;
+  img.alt = "Random";
+  img.classList.add("gallery-image");
+
+  imageContainer.appendChild(img);
+}
+
+// Load one image initially
+window.addEventListener("DOMContentLoaded", loadImage);
+
+
+
+</script>
+
+</body>
+</html>

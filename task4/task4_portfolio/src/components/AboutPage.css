@@ -1,0 +1,68 @@
+/* src/components/SecondPage.css */
+
+.about-page {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.icon-wrapper {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Customize each icon position */
+
+
+.home-icon {
+  top: 10%;
+  left: 25%;
+}
+
+.about-icon {
+  top: 33.5%;
+  left: 27%;
+}
+
+.contact-icon {
+    top: 45%;
+    left: 43%;
+}
+
+.projects-icon {
+    top: 44%;
+    left: 56%;
+}
+
+
+.skills-icon {
+  top: 50.5%;
+  left: 68%;
+}
+
+.corner-text {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 85px;
+  font-weight: bold;
+  color: hsl(215, 100%, 58%);
+  background-color: rgba(255, 255, 255, 0.047);
+  padding: 8px 16px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 999;
+}
