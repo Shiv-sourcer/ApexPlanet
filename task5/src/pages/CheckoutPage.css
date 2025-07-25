@@ -1,0 +1,134 @@
+.checkout-page {
+    padding: 4rem 5%;
+    background-color: var(--background-color, #f4f7f6);
+}
+
+.checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--surface-color, #fff);
+    padding: 2.5rem;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: var(--box-shadow, 0 4px 12px rgba(0,0,0,0.08));
+}
+
+.checkout-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.checkout-subtitle {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--subtle-text-color);
+}
+
+.checkout-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* --- NEW: Style for the required star --- */
+.required-star {
+    color: var(--accent-color, #dc3545);
+    margin-left: 4px;
+    font-weight: 700;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: var(--border-radius, 8px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkout-form input:focus {
+    outline: none;
+    border-color: var(--primary-color, #0a7ea4);
+    box-shadow: 0 0 0 3px rgba(10, 126, 164, 0.2);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2.7rem;
+}
+
+.payment-title {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--border-color, #e0e0e0);
+    padding-top: 2rem;
+}
+
+.payment-options {
+    display: grid;
+    gap: 1rem;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: var(--border-radius, 8px);
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-option:hover {
+    border-color: var(--primary-color, #0a7ea4);
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+}
+
+.payment-option input[type="radio"]:checked + .payment-details {
+    color: var(--primary-color, #0a7ea4);
+}
+
+.payment-details strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.payment-details span {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+
+.place-order-button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #1a1a1a; /* A professional, near-black color */
+    color: white;
+    border: 2px solid #1a1a1a;
+    border-radius: var(--border-radius, 8px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-button:hover {
+    background-color: #404040; /* A lighter black for the hover effect */
+    border-color: #404040;
+    color: white;
+}

@@ -1,0 +1,54 @@
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: fadeInOverlay 0.3s ease-in-out;
+}
+
+/* The container for the loading bar, positioned at the top of the screen */
+.loader-line-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* The height of the loading bar */
+    background-color: rgba(10, 126, 164, 0.2); /* The faint track for the bar */
+    overflow: hidden; /* This is crucial for the animation */
+}
+
+/* The moving part of the loading bar */
+.loader-line {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color, #0a7ea4);
+    animation: indeterminate-progress 2s infinite ease-in-out;
+}
+
+/* Keyframes for the indeterminate (back and forth) loading animation */
+@keyframes indeterminate-progress {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Keyframes for the overlay fade-in effect */
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

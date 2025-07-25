@@ -1,0 +1,111 @@
+/* --- Existing Styles for the Page Title --- */
+.products-page h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.products-page h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* --- Styles for the Filter Bar --- */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    background-color: var(--surface-color, #fff);
+    border-radius: var(--border-radius, 8px);
+    box-shadow: var(--box-shadow, 0 4px 12px rgba(0,0,0,0.08));
+}
+
+/* --- NEW: Styles for the selector group --- */
+.filter-selectors {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* This creates space between the two dropdowns */
+}
+
+.category-select,
+.currency-select {
+    font-family: var(--font-family-sans, 'Inter', sans-serif);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: var(--border-radius, 8px);
+    background-color: var(--background-color, #f4f7f6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.search-input {
+    font-family: var(--font-family-sans, 'Inter', sans-serif);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: var(--border-radius, 8px);
+    background-color: var(--background-color, #f4f7f6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.search-input:focus,
+.category-select:focus,
+.currency-select:focus {
+    outline: none;
+    border-color: var(--primary-color, #0a7ea4);
+    box-shadow: 0 0 0 3px rgba(10, 126, 164, 0.2);
+}
+
+/* --- Existing Styles for the Product Grid --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--subtle-text-color, #555);
+    padding: 4rem 0;
+}
+
+/* --- Responsive adjustments for the filter bar --- */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        max-width: 100%;
+    }
+    
+    .filter-selectors {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+}

@@ -1,0 +1,86 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: fadeInBackdrop 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--surface-color, #fff);
+    padding: 3rem;
+    border-radius: var(--border-radius, 8px);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: zoomInContent 0.4s ease-out;
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #27ae60;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    line-height: 1;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.modal-message {
+    font-size: 1rem;
+    color: var(--subtle-text-color);
+    margin-bottom: 2.5rem;
+}
+
+.modal-button {
+    display: inline-block;
+    background-color: var(--primary-color, #0a7ea4);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius, 8px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: var(--secondary-color, #086a8a);
+    transform: scale(1.05);
+}
+
+@keyframes fadeInBackdrop {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomInContent {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
